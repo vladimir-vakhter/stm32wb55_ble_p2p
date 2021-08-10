@@ -1,0 +1,5 @@
+# language settings and preferences
+.settings/*
+
+# debug
+Debug/*
