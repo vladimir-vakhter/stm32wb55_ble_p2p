@@ -22,7 +22,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "stm32_seq.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -108,6 +108,10 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+  	/*
+  	 * sequencer (simple scheduler) as a basic task manager
+  	 */
+  	UTIL_SEQ_Run(~0);
   }
   /* USER CODE END 3 */
 }
