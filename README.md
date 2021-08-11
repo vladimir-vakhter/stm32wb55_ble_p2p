@@ -71,7 +71,7 @@ Note: advertising stops in 60 seconds automatically if we did not connect our ph
 
 # Testing
 The application was tested to ensure that:
-* One is able to toggle an LED on the peripheral by clicking an LED icon in the ST BLE Sensor application.
+* One is able to toggle an LED on the peripheral by clicking the blue LED icon in the ST BLE Sensor application.
 * The ST BLE application is capable to display the notifications sent by the peripheral on each SW1 push button's press event.
 
 # Acknowledgements
