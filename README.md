@@ -26,6 +26,7 @@ Directory                     | Content
 ----------------------------- | --------------------------------
 Drivers                       | CMSIS and STM32WBxx_HAL_Driver
 Core\Src\stm32wbxx_hal_msp.c  | HSE tuning
+Core\Src\stm32wbxx_it.c       | Interrupt service routines
 
   # Usage
 * Power on the peripheral with this application flashed
