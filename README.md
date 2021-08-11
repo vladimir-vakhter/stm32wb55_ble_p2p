@@ -1,7 +1,7 @@
 # stm32wb55_ble
 
 # Brief
-BLE functionality of STM32WB55. This project implements a P2P (peer-to-peer, or point-to-point) communication between a BLE [peripheral](#peripheral) and a [central](#central). The application allows to eluminate a blue LED on the peripheral and to receive a notification on the central in the event when a push button was pressed on the peripheral. Read below for more details.
+BLE functionality of STM32WB55. This project implements a P2P (peer-to-peer, or point-to-point) communication between a [BLE peripheral](#peripheral) and a [central](#central). The application allows to eluminate a blue LED on the peripheral and to receive a notification on the central in the event when a push button was pressed on the peripheral. Read below for more details.
 
 # Hardware
 ## Devices
