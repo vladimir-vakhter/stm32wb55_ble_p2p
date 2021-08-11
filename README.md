@@ -16,6 +16,7 @@ During the configuration phase (STM32CubeIDE, .ioc file), to work with BLE, we n
 * Activate RTC (Timers / RTC / Activate Clock Source).
 * Enable the middleware (Middleware / STM32WPAN / BLE).
 * Clock tree: LSE (32.768 kHz) is used for RTC. System clock MUX should enable HSE_SYS (HSE_PRES = 1) (HSE is 32MHz). Both CPU1 and CPU2 should run at 32 MHz. RFWKP Clock Mux should enable LSE.
+* While configuring the MCU (.ioc file), go to Project Manager/Advanced Settings and make sure that STM32_WPAN middleware is activated at the most end, after all the peripherals are enabled.
 
 # Software prerequisites:
 The code running on the STM32WB55 is written in the STM32CubeIDE. This IDE integrates STM32CubeMX, a graphical software configuration tool with GUI, allowing to generate the C initialization code. This project uses HAL, Hardware Abstraction Layer, API to control the STM32WB55's hardware blocks.
@@ -25,6 +26,8 @@ The code running on the STM32WB55 is written in the STM32CubeIDE. This IDE integ
 * On your smartphone, activare Bluetooth and launch the ST BLE Sensor application
 * Connect to the peripheral (name = BLETEST)
 * Eluminate the Blue LED on the board from your phone, push SW1 button of the board to get notifications on your phone
+
+Note: advertising stops in 60 seconds automatically if we did not connect our phone to the board. In this case, press the reset button on the board and reconnect it to your phone.
 
 # Acknowledgements
 This project is based on the public video tutorials posted on YouTube by ST Microelectronics [1, 2].
