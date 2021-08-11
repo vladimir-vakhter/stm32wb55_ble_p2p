@@ -29,11 +29,12 @@ The code running on the STM32WB55 is written in the STM32CubeIDE. This IDE integ
 The architecture is based on a sequencer, or simple task scheduler. We register various tasks, then we start them in a switch. After we get through all the tasks, we get to the IDLE state (low-power mode).
 
 ## Project's directories' content 
-Directory                     | Content
------------------------------ | --------------------------------
-Drivers                       | CMSIS and STM32WBxx_HAL_Driver
-Core\Src\stm32wbxx_hal_msp.c  | HSE tuning
-Core\Src\stm32wbxx_it.c       | Interrupt service routines
+Directory                                                            | Content
+-------------------------------------------------------------------- | --------------------------------
+Drivers                                                              | CMSIS and STM32WBxx_HAL_Driver
+Core\Src\stm32wbxx_hal_msp.c                                         | HSE tuning
+Core\Src\stm32wbxx_it.c                                              | Interrupt service routines
+Utilities\sequencer\stm32_seq.h <br> Utilities\sequencer\stm32_seq.c | Sequencer
 
   # Usage
 * Power on the peripheral with this application flashed
