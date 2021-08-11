@@ -22,8 +22,10 @@ During the configuration phase (STM32CubeIDE, .ioc file), to work with BLE, we n
 The code running on the STM32WB55 is written in the STM32CubeIDE. This IDE integrates STM32CubeMX, a graphical software configuration tool with GUI, allowing to generate the C initialization code. This project uses HAL, Hardware Abstraction Layer, API to control the STM32WB55's hardware blocks.
 
 # Project's directories' content 
-* Drivers                        CMSIS and STM32WBxx_HAL_Driver
-* Core\Src\stm32wbxx_hal_msp.c   HSE tuning
+Directory                     | Content
+----------------------------- | --------------------------------
+Drivers                       | CMSIS and STM32WBxx_HAL_Driver
+Core\Src\stm32wbxx_hal_msp.c  | HSE tuning
 
   # Usage
 * Power on the peripheral with this application flashed
