@@ -41,6 +41,7 @@ Core\Src\app_entry.c                                                 | APPE_Init
 STM32_WPAN\App\app_ble.c                                             | APP_BLE_Init()<br>Initialize the BLE communications<br>Manage GAP events
 Middlewares\ST\STM32_WPAN\ble\svc\Src\svc_ctl.c                      | SVCCTL_Init()<br>Initialize GATT services
 Middlewares\ST\STM32_WPAN\ble\svc\Src\p2p_stm.c                      | aci_gatt_add_service(), aci_gatt_add_char()<br>Add a service/characteristic
+STM32_WPAN\App\p2p_server_app.c                                      | P2P server application
 Drivers                                                              | CMSIS and STM32WBxx_HAL_Driver
 Core\Src\stm32wbxx_hal_msp.c                                         | HSE tuning
 Core\Src\stm32wbxx_it.c                                              | Interrupt service routines
