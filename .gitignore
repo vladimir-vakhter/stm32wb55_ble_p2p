@@ -3,3 +3,6 @@
 
 # debug
 Debug/*
+
+# debug config file
+*.launch
