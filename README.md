@@ -19,6 +19,12 @@ During the configuration phase (STM32CubeIDE, .ioc file), to work with BLE, we n
 # Software prerequisites:
 The code running on the STM32WB55 is written in the STM32CubeIDE. This IDE integrates STM32CubeMX, a graphical software configuration tool with GUI, allowing to generate the C initialization code. This project uses HAL, Hardware Abstraction Layer, API to control the STM32WB55's hardware blocks.
 
+# Usage
+* Power on the peripheral with this application flashed
+* On your smartphone, activare Bluetooth and launch the ST BLE Sensor application
+* Connect to the peripheral (name = BLETEST)
+* Eluminate the Blue LED on the board from your phone, push SW1 button of the board to get notifications on your phone
+
 # Acknowledgements
 This project is based on the public video tutorials posted on YouTube by ST Microelectronics.
 
