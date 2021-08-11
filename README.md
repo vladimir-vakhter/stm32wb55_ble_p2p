@@ -26,7 +26,8 @@ The code running on the STM32WB55 is written in the STM32CubeIDE. This IDE integ
 * Eluminate the Blue LED on the board from your phone, push SW1 button of the board to get notifications on your phone
 
 # Acknowledgements
-This project is based on the public video tutorials posted on YouTube by ST Microelectronics.
+This project is based on the public video tutorials posted on YouTube by ST Microelectronics [1, 2].
 
 # References:
-STM32WB Workshop - 3 How to add BLE functionality. Available online: https://www.youtube.com/watch?v=zNfIGh30kSs&t=1192s. Last opened: August 10, 2021.
+1. STM32WB Workshop - 3 How to add BLE functionality. Available online: https://www.youtube.com/watch?v=zNfIGh30kSs&t=1192s. Last opened: August 10, 2021.
+2. STM32WB Workshop – 4 How to modify BLE Profile. Available online: https://www.youtube.com/watch?v=tPqHUqiWsvs. Last opened: August 11, 2021.
