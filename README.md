@@ -69,6 +69,11 @@ The above table is based on the information provided in [1] and [3].
 
 Note: advertising stops in 60 seconds automatically if we did not connect our phone to the board. In this case, press the reset button on the board and reconnect it to your phone. The interval of 60 sec until the board becomes non-discoverable may be adjusted by the user to set the desired value.
 
+# Testing
+The application was tested to ensure that:
+* One is able to toggle an LED on the peripheral by clicking an LED icon in the ST BLE Sensor application.
+* The ST BLE application is capable to display the notifications sent by the peripheral on each SW1 push button's press event.
+
 # Acknowledgements
 This project is based on the public video tutorials posted on YouTube by ST Microelectronics [1, 2].
 
