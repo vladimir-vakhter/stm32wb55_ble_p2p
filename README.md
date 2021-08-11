@@ -35,11 +35,14 @@ b. UTIL_SEQ_SetTask(1<<CFG_TASK_SW1_BUTTON_PUSHED_ID, CFG_SCH_PRIO_0);
 ## Project's directories' content 
 Directory                                                            | Content
 -------------------------------------------------------------------- | --------------------------------
+Core\Src\main.c                                                      | Initialize the system (HAL, Clock, etc.)<br>Infinite loop for run mode
+Core\Src\app_entry.c                                                 | Initialize the BSP (LEDs, buttons, etc.)<br>Wait for initialization done
+STM32_WPAN\App\app_ble.c                                             | Initialize the BLE communications<br>Manage GAP events
+Middlewares\ST\STM32_WPAN\ble\svc\Src\svc_ctl.c                      | Initialize GATT services
 Drivers                                                              | CMSIS and STM32WBxx_HAL_Driver
 Core\Src\stm32wbxx_hal_msp.c                                         | HSE tuning
 Core\Src\stm32wbxx_it.c                                              | Interrupt service routines
-Utilities\sequencer\stm32_seq.h <br> Utilities\sequencer\stm32_seq.c | Sequencer
-
+Utilities\sequencer\stm32_seq.h<br>Utilities\sequencer\stm32_seq.c   | Sequencer
 
 # Usage
 * Power on the peripheral with this application flashed
