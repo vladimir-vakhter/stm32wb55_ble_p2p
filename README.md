@@ -34,18 +34,30 @@ b. UTIL_SEQ_SetTask(1<<CFG_TASK_SW1_BUTTON_PUSHED_ID, CFG_SCH_PRIO_0);
 
 ## Project's directories' content 
 Directory                                                            | Function/Content
--------------------------------------------------------------------- | --------------------------------
+-------------------------------------------------------------------- | ----------------------------------------------------------------------------------------
 Core\Startup\startup_stm32wb55rgvx.s                                 | Reset_Handler()
 Core\Src\main.c                                                      | main()<br>Initialize the system (HAL, Clock, etc.)<br>Infinite loop for run mode
 Core\Src\app_entry.c                                                 | APPE_Init()<br>Initialize the BSP (LEDs, buttons, etc.)<br>Wait for initialization done
 STM32_WPAN\App\app_ble.c                                             | APP_BLE_Init()<br>Initialize the BLE communications<br>Manage GAP events
+Core/Inc/app_conf.h<br>Core/Inc/app_entry.h              		     | Parameters configuration file of the application
 Middlewares\ST\STM32_WPAN\ble\svc\Src\svc_ctl.c                      | SVCCTL_Init()<br>Initialize GATT services
 Middlewares\ST\STM32_WPAN\ble\svc\Src\p2p_stm.c                      | aci_gatt_add_service(), aci_gatt_add_char()<br>Add a service/characteristic
-STM32_WPAN\App\p2p_server_app.c                                      | P2P server application
+STM32_WPAN\App\p2p_server_app.c                                      | P2P server application<br>GATT even handler
 Drivers                                                              | CMSIS and STM32WBxx_HAL_Driver
 Core\Src\stm32wbxx_hal_msp.c                                         | HSE tuning
-Core\Src\stm32wbxx_it.c                                              | Interrupt service routines
+Core\Src\stm32wbxx_it.c                                              | Interrupt service routines / handlers
 Utilities\sequencer\stm32_seq.h<br>Utilities\sequencer\stm32_seq.c   | Sequencer
+STM32_WPAN/Target/hw_ipcc.c      		                             | IPCC Driver
+Core/Src/system_stm32wbxx.c     		                             | STM32WBxx system source file
+Core/Inc/stm32wbxx_hal_conf.h                                        | HAL configuration file
+STM32_WPAN/App/ble_conf.h                                            | BLE Services configuration
+STM32_WPAN/App/ble_dbg_conf.h                                        | BLE Traces configuration of the BLE services
+Core/Inc/hw_conf.h                                                   | Configuration file of the HW
+Core/Inc/utilities_conf.h    		                                 | Configuration file of the utilities
+Core/Src/stm32_lpm_if.c			                                     | Low Power Manager Interface
+Core/Src/hw_timerserver.c 		                                     | Timer Server based on RTC
+
+The above table is based on the information provided in [1] and [3].
 
 # Usage
 * Power on the peripheral with this application flashed
