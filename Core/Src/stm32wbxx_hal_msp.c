@@ -22,7 +22,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 /* USER CODE BEGIN Includes */
-
+#include "otp.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -64,8 +64,14 @@
 void HAL_MspInit(void)
 {
   /* USER CODE BEGIN MspInit 0 */
+	#warning "Following code is valid only for P-NUCLEO-WB55 boards and should be reimplemented depending on the target HW and HSE capacitor tuning value storage location."
+  OTP_ID0_t* p_otp;
 
-  /* USER CODE END MspInit 0 */
+  // read HSE_Tuning from OTP
+  p_otp = (OTP_ID0_t*) OTP_Read(0);
+  if (p_otp) { LL_RCC_HSE_SetCapacitorTuning(p_otp->hse_tuning); }
+
+	/* USER CODE END MspInit 0 */
 
   __HAL_RCC_HSEM_CLK_ENABLE();
 
