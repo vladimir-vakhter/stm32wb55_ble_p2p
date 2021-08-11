@@ -26,7 +26,11 @@ During the configuration phase (STM32CubeIDE, .ioc file), to work with BLE, we n
 The code running on the STM32WB55 is written in the STM32CubeIDE. This IDE integrates STM32CubeMX, a graphical software configuration tool with GUI, allowing to generate the C initialization code. This project uses HAL, Hardware Abstraction Layer, API to control the STM32WB55's hardware blocks.
 
 ## Architecture
-The architecture is based on a sequencer, or simple task scheduler. We register various tasks, then we start them in a switch. After we get through all the tasks, we get to the IDLE state (low-power mode).
+The architecture is based on a sequencer. The sequencer provides a simple background scheduling function. We register various tasks, which are then set in a switch-case block upon an corresponding event occurs. A sequencer is used to execute the tasks in background and enter the low-power mode when there is no activity. After we get through all the tasks, we get to the IDLE state (low-power mode).
+
+### The instruction to register and set the task should be:
+a.	UTIL_SEQ_RegTask(1<<CFG_TASK_SW1_BUTTON_PUSHED_ID, 0, P2PS_Send_Notification);
+b.	UTIL_SEQ_SetTask(1<<CFG_TASK_SW1_BUTTON_PUSHED_ID, CFG_SCH_PRIO_0);
 
 ## Project's directories' content 
 Directory                                                            | Content
@@ -36,7 +40,7 @@ Core\Src\stm32wbxx_hal_msp.c                                         | HSE tunin
 Core\Src\stm32wbxx_it.c                                              | Interrupt service routines
 Utilities\sequencer\stm32_seq.h <br> Utilities\sequencer\stm32_seq.c | Sequencer
 
-  # Usage
+# Usage
 * Power on the peripheral with this application flashed
 * On your smartphone, activare Bluetooth and launch the ST BLE Sensor application
 * Connect to the peripheral (name = BLETEST)
