@@ -5,8 +5,10 @@ BLE functionality of STM32WB55. This project implements a P2P (peer-to-peer, or 
 
 # Hardware
 ## Devices
-1. The Nucleo-68 evaluation board from the P-NUCLEO-WB55 pack. MCU: STM32WB55RGV6U (VFQFPN68 package). This board is further referred as "a BLE peripheral" and acts as a GATT server. The MCU is further referred as the STM32WB55.
-2. A smartphone based on the Android OS. This node is futher referred as "a central" or as "a base station". The ST BLE Sensor application (available at the Android Play Store) is installed on the smartphone. The base station plays the role of a GATT client.
+### BLE Peripheral
+The Nucleo-68 evaluation board from the P-NUCLEO-WB55 pack. MCU: STM32WB55RGV6U (VFQFPN68 package). This board is further referred as "a BLE peripheral" and acts as a GATT server. The MCU is further referred as the STM32WB55.
+### BLE Central
+A smartphone based on the Android OS. This node is futher referred as "a central" or as "a base station". The ST BLE Sensor application (available at the Android Play Store) is installed on the smartphone. The base station plays the role of a GATT client.
 
 ## Configuration
 The STM32WB55 is a dual-core MCU with a Cortex-M4 (CPU1) for the end-user application and a Cortex-M0+ (CPU2) for the BLE stack. Inter processor communication controller (IPCC) is used for the communication of CPU1 with CPU2. 
