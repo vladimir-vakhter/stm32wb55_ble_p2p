@@ -15,7 +15,7 @@ During the configuration phase (STM32CubeIDE, .ioc file), to work with BLE, we n
 * Activate RF1 (Connectivity / RF1).
 * Activate RTC (Timers / RTC / Activate Clock Source).
 * Enable the middleware (Middleware / STM32WPAN / BLE).
-* Clock tree: LSE 32.768 kHz is used for RTC. System clock MUX should enable HSE_SYS (HSE_PRES = 1). Both CPU1 and CPU2 should run at 32 MHz. 
+* Clock tree: LSE (32.768 kHz) is used for RTC. System clock MUX should enable HSE_SYS (HSE_PRES = 1) (HSE is 32MHz). Both CPU1 and CPU2 should run at 32 MHz. RFWKP Clock Mux should enable LSE.
 
 # Software prerequisites:
 The code running on the STM32WB55 is written in the STM32CubeIDE. This IDE integrates STM32CubeMX, a graphical software configuration tool with GUI, allowing to generate the C initialization code. This project uses HAL, Hardware Abstraction Layer, API to control the STM32WB55's hardware blocks.
