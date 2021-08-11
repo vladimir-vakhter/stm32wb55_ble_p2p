@@ -9,7 +9,7 @@ BLE functionality of STM32WB55. This project implements a P2P (peer-to-peer, or 
 2. A smartphone based on the Android OS. This node is futher referred as "a central" or as "a base station". The ST BLE Sensor application (available at the Android Play Store) is installed on the smartphone. The base station plays the role of a GATT client.
 
 ## Configuration
-The STM32WB55 is a dual-core MCU with a Cortex-M4 (CPU 1) for the end-user application and a Cortex-M0+ (CPU 2) for the BLE stack.
+The STM32WB55 is a dual-core MCU with a Cortex-M4 (CPU1) for the end-user application and a Cortex-M0+ (CPU2) for the BLE stack. Inter processor communication controller (IPCC) is used for the communication of CPU1 with CPU2. 
 
 This project requires the stm32wb5x_BLE_Stack_full_fw.bin wireless stack binary to be programmed into the RF subsystem (CPU 2). For more details on how to flash this binary into the CPU, read, for example, UM2550, a user manual from ST Microelectronics.
 
@@ -39,6 +39,7 @@ Drivers                                                              | CMSIS and
 Core\Src\stm32wbxx_hal_msp.c                                         | HSE tuning
 Core\Src\stm32wbxx_it.c                                              | Interrupt service routines
 Utilities\sequencer\stm32_seq.h <br> Utilities\sequencer\stm32_seq.c | Sequencer
+
 
 # Usage
 * Power on the peripheral with this application flashed
