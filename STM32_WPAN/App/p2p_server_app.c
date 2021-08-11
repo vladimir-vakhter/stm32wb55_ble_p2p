@@ -53,7 +53,7 @@
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN PFP */
-
+static void P2PS_Send_Notification(void);
 /* USER CODE END PFP */
 
 /* Functions Definition ------------------------------------------------------*/
@@ -147,7 +147,12 @@ void P2PS_APP_Init(void)
 }
 
 /* USER CODE BEGIN FD */
-
+static void P2PS_Send_Notification(void)
+{
+	/* Update P2P_NOTIFY characteristic */
+	P2PS_STM_App_Update_Char(P2P_NOTIFY_CHAR_UUID, 0x00);
+	return;
+}
 /* USER CODE END FD */
 
 /*************************************************************
