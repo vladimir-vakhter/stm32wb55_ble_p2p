@@ -21,7 +21,11 @@ During the configuration phase (STM32CubeIDE, .ioc file), to work with BLE, we n
 # Software prerequisites:
 The code running on the STM32WB55 is written in the STM32CubeIDE. This IDE integrates STM32CubeMX, a graphical software configuration tool with GUI, allowing to generate the C initialization code. This project uses HAL, Hardware Abstraction Layer, API to control the STM32WB55's hardware blocks.
 
-# Usage
+# Project's directories' content 
+* Drivers                        CMSIS and STM32WBxx_HAL_Driver
+* Core\Src\stm32wbxx_hal_msp.c   HSE tuning
+
+  # Usage
 * Power on the peripheral with this application flashed
 * On your smartphone, activare Bluetooth and launch the ST BLE Sensor application
 * Connect to the peripheral (name = BLETEST)
@@ -35,3 +39,4 @@ This project is based on the public video tutorials posted on YouTube by ST Micr
 # References:
 1. STM32WB Workshop - 3 How to add BLE functionality. Available online: https://www.youtube.com/watch?v=zNfIGh30kSs&t=1192s. Last opened: August 10, 2021.
 2. STM32WB Workshop – 4 How to modify BLE Profile. Available online: https://www.youtube.com/watch?v=tPqHUqiWsvs. Last opened: August 11, 2021.
+3. STM32Cube MCU Package for STM32WB series: STM32Cube_FW_WB_V1.11.1\Projects\P-NUCLEO-WB55.Nucleo\Applications\BLE\BLE_p2pServer. Available online: https://www.st.com/en/embedded-software/stm32cubewb.html. Last opened: August 11, 2021.
