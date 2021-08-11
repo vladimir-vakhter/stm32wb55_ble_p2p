@@ -33,12 +33,14 @@ a. UTIL_SEQ_RegTask(1<<CFG_TASK_SW1_BUTTON_PUSHED_ID, 0, P2PS_Send_Notification)
 b. UTIL_SEQ_SetTask(1<<CFG_TASK_SW1_BUTTON_PUSHED_ID, CFG_SCH_PRIO_0);
 
 ## Project's directories' content 
-Directory                                                            | Content
+Directory                                                            | Function/Content
 -------------------------------------------------------------------- | --------------------------------
-Core\Src\main.c                                                      | Initialize the system (HAL, Clock, etc.)<br>Infinite loop for run mode
-Core\Src\app_entry.c                                                 | Initialize the BSP (LEDs, buttons, etc.)<br>Wait for initialization done
-STM32_WPAN\App\app_ble.c                                             | Initialize the BLE communications<br>Manage GAP events
-Middlewares\ST\STM32_WPAN\ble\svc\Src\svc_ctl.c                      | Initialize GATT services
+Core\Startup\startup_stm32wb55rgvx.s                                 | Reset_Handler()
+Core\Src\main.c                                                      | main()<br>Initialize the system (HAL, Clock, etc.)<br>Infinite loop for run mode
+Core\Src\app_entry.c                                                 | APPE_Init()<br>Initialize the BSP (LEDs, buttons, etc.)<br>Wait for initialization done
+STM32_WPAN\App\app_ble.c                                             | APP_BLE_Init()<br>Initialize the BLE communications<br>Manage GAP events
+Middlewares\ST\STM32_WPAN\ble\svc\Src\svc_ctl.c                      | SVCCTL_Init()<br>Initialize GATT services
+Middlewares\ST\STM32_WPAN\ble\svc\Src\p2p_stm.c                      | aci_gatt_add_service(), aci_gatt_add_char()<br>Add a service/characteristic
 Drivers                                                              | CMSIS and STM32WBxx_HAL_Driver
 Core\Src\stm32wbxx_hal_msp.c                                         | HSE tuning
 Core\Src\stm32wbxx_it.c                                              | Interrupt service routines
@@ -50,7 +52,7 @@ Utilities\sequencer\stm32_seq.h<br>Utilities\sequencer\stm32_seq.c   | Sequencer
 * Connect to the peripheral (name = BLETEST)
 * Eluminate the Blue LED on the board from your phone, push SW1 button of the board to get notifications on your phone
 
-Note: advertising stops in 60 seconds automatically if we did not connect our phone to the board. In this case, press the reset button on the board and reconnect it to your phone.
+Note: advertising stops in 60 seconds automatically if we did not connect our phone to the board. In this case, press the reset button on the board and reconnect it to your phone. The interval of 60 sec until the board becomes non-discoverable may be adjusted by the user to set the desired value.
 
 # Acknowledgements
 This project is based on the public video tutorials posted on YouTube by ST Microelectronics [1, 2].
