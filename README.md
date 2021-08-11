@@ -1,4 +1,6 @@
 # stm32wb55_ble
+
+# Brief
 BLE functionality of STM32WB55. This project implements a P2P (peer-to-peer, or point-to-point) communication between a BLE peripheral and a base station. The application allows to eluminate a blue LED on the peripheral and to receive a notification on the central in the event when a push button was pressed on the peripheral. Read below for more details.
 
 # Hardware
@@ -44,7 +46,7 @@ Note: advertising stops in 60 seconds automatically if we did not connect our ph
 # Acknowledgements
 This project is based on the public video tutorials posted on YouTube by ST Microelectronics [1, 2].
 
-# References:
+# References
 1. STM32WB Workshop - 3 How to add BLE functionality. Available online: https://www.youtube.com/watch?v=zNfIGh30kSs&t=1192s. Last opened: August 10, 2021.
 2. STM32WB Workshop – 4 How to modify BLE Profile. Available online: https://www.youtube.com/watch?v=tPqHUqiWsvs. Last opened: August 11, 2021.
 3. STM32Cube MCU Package for STM32WB series: STM32Cube_FW_WB_V1.11.1\Projects\P-NUCLEO-WB55.Nucleo\Applications\BLE\BLE_p2pServer. Available online: https://www.st.com/en/embedded-software/stm32cubewb.html. Last opened: August 11, 2021.
