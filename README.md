@@ -27,6 +27,8 @@ During the configuration phase (STM32CubeIDE, .ioc file), to work with BLE, we n
 ## Technologies
 The code running on the STM32WB55 is written in the STM32CubeIDE. This IDE integrates STM32CubeMX, a graphical software configuration tool with GUI, allowing to generate the C initialization code. This project uses HAL, Hardware Abstraction Layer, API to control the STM32WB55's hardware blocks.
 
+This application is based on STM32Cube_FW_WB_V1.11.1 firmware package.
+
 ## Architecture
 The architecture is based on a sequencer. The sequencer provides a simple background scheduling function. We register various tasks, which are then set in a switch-case block upon an corresponding event occurs. A sequencer is used to execute the tasks in background and enter the low-power mode when there is no activity. After we get through all the tasks, we get to the IDLE state (low-power mode).
 
