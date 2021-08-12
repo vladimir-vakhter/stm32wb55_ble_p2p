@@ -61,7 +61,7 @@ Core/Inc/utilities_conf.h    		                                 | Configuration 
 Core/Src/stm32_lpm_if.c			                                     | Low Power Manager Interface
 Core/Src/hw_timerserver.c 		                                     | Timer Server based on RTC
 
-The above table is based on the information provided in [1] and [3].
+The above table is based on the information provided in [1] and [2].
 
 # Usage
 * Power on the peripheral with this application flashed
