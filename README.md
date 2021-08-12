@@ -77,9 +77,8 @@ The application was tested to ensure that:
 * The ST BLE application is capable to display the notifications sent by the peripheral on each SW1 push button's press event.
 
 # Acknowledgements
-This project is based on the public video tutorials posted on YouTube by ST Microelectronics [1, 2].
+This project is based on the public video tutorials posted on YouTube by ST Microelectronics [1].
 
 # References
 1. STM32WB Workshop - 3 How to add BLE functionality. Available online: https://www.youtube.com/watch?v=zNfIGh30kSs&t=1192s. Last opened: August 10, 2021.
-2. STM32WB Workshop – 4 How to modify BLE Profile. Available online: https://www.youtube.com/watch?v=tPqHUqiWsvs. Last opened: August 11, 2021.
-3. STM32Cube MCU Package for STM32WB series: STM32Cube_FW_WB_V1.11.1\Projects\P-NUCLEO-WB55.Nucleo\Applications\BLE\BLE_p2pServer. Available online: https://www.st.com/en/embedded-software/stm32cubewb.html. Last opened: August 11, 2021.
+2. STM32Cube MCU Package for STM32WB series: STM32Cube_FW_WB_V1.11.1\Projects\P-NUCLEO-WB55.Nucleo\Applications\BLE\BLE_p2pServer. Available online: https://www.st.com/en/embedded-software/stm32cubewb.html. Last opened: August 11, 2021.
